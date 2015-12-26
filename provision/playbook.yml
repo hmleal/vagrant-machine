@@ -1,0 +1,8 @@
+---
+- name: Prepara ambiente básico de programação
+  hosts: all
+  sudo: yes
+  roles:
+    - common
+    - python
+    - vim

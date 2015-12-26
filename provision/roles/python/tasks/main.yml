@@ -1,0 +1,9 @@
+---
+- name: Ensure python packages are installed
+  apt: name={{ item }}
+  with_items:
+    - python-pip
+    - python-dev
+    - python-virtualenv
+    - git
+    - git-core

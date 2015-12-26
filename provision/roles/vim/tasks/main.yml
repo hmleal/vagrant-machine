@@ -1,0 +1,15 @@
+---
+- name: Ensure vundle is installed
+  git: repo=https://github.com/gmarik/Vundle.vim.git dest=/home/vagrant/.vim/bundle/Vundle.vim
+  become: yes
+  become_user: vagrant
+
+- name: Ensure dotfiles is installed
+  git: repo=https://github.com/hmleal/dotfiles.git dest=/home/vagrant/.dotfiles
+  become: yes
+  become_user: vagrant
+
+- name: Create symbolic link to vimrc
+  command: ln -s /home/vagrant/.dotfiles/vimrc /home/vagrant/.vimrc
+  become: yes
+  become_user: vagrant
