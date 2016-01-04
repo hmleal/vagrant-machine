@@ -1,9 +1,11 @@
 ---
 - name: Prepara ambiente básico de programação
   hosts: all
+  user: vagrant
   sudo: yes
   roles:
     - common
     - python
+    - node
     - java
     - vim
