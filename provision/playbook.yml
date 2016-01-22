@@ -7,5 +7,6 @@
     - common
     - python
     - node
+    - postgresql
     - java
     - vim

@@ -1,0 +1,11 @@
+---
+- name: Ensure postgresql packages are installed
+  apt: name={{ item }}
+  with_items:
+    - postgresql
+    - postgresql-contrib
+    - python-psycopg2
+
+- name: Create postgresql user
+  become_user: postgres
+  postgresql_user: name=vagrant password=vagrant role_attr_flags=SUPERUSER
